@@ -27,6 +27,7 @@ jobs:
         uses: Jimver/cuda-toolkit@v0.2.24
         with:
           cuda: '12.8.0'
+          use-github-cache: false
            
       - name: Install torch 2.7 + CUDA 12.8
         run: |
