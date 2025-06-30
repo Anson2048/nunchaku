@@ -24,7 +24,7 @@ jobs:
           pip install build wheel
           
       - name: 安装 CUDA Toolkit
-        uses: Jimver/cuda-toolkit@v0.2.25
+        uses: Jimver/cuda-toolkit@v0.2.24
         with:
           cuda: '12.8.0'
            
