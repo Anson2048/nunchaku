@@ -29,7 +29,8 @@ jobs:
 
       # 新增：设置 CUDA 架构，避免 No SM targets found 报错
       - name: 设置 CUDA 架构
-        run: echo "TORCH_CUDA_ARCH_LIST=8.0;7.5;7.0;6.1" >> $GITHUB_ENV
+        shell: pwsh
+        run: echo "TORCH_CUDA_ARCH_LIST=8.0;7.5;7.0;6.1" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       - name: 安装 CUDA Toolkit
         uses: Jimver/cuda-toolkit@v0.2.24
